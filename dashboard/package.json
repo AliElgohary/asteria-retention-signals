@@ -1,0 +1,6 @@
+{
+  "name": "asteria-retention-dashboard",
+  "private": true,
+  "scripts": { "test": "node --test ../tests/dashboard.test.cjs" },
+  "devDependencies": { "playwright": "1.62.1" }
+}

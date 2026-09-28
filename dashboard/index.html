@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Asteria retention signals</title>
+    <link rel="stylesheet" href="styles.css?v=relationship-axes" />
+  </head>
+  <body>
+    <header>
+      <div class="hero-content">
+        <p class="eyebrow">WORKFORCE ANALYTICS · EXPLORATORY</p>
+        <h1>Retention, in context.</h1>
+        <p class="subtitle">A transparent view of synthetic workforce retention and external market signals.</p>
+      </div>
+    </header>
+    <main>
+      <section class="filters" aria-label="Explore retention data">
+        <label>Objective <select id="objective"></select></label>
+        <label>Country <select id="country"></select></label>
+        <label>Workforce segment <select id="segment"></select></label>
+        <label>From <input id="date-from" type="month" value="2021-01" /></label>
+        <label>To <input id="date-to" type="month" value="2025-12" /></label>
+      </section>
+      <p id="status" role="status" aria-live="polite">Loading local evidence…</p>
+      <section id="content" hidden>
+        <div class="kpis" aria-label="Selected metric summary">
+          <article><span>Latest metric</span><strong id="latest-value">—</strong><small id="latest-period">—</small></article>
+          <article><span id="population-label">Eligible population</span><strong id="population">—</strong><small id="population-note">at latest observation</small><small id="sample-warning" class="warn"></small></article>
+          <article><span>Target status</span><strong id="target-status">—</strong><small id="target-copy">—</small></article>
+          <article><span>Recent hires still maturing</span><strong id="censored">—</strong><small>excluded from retention rate in selected date range</small></article>
+        </div>
+        <div class="workspace-grid">
+        <section class="panel trend-panel"><h2>Retention trend</h2><div class="chart-wrap"><svg id="chart" viewBox="0 0 800 260" role="img" aria-label="Retention trend chart"></svg><div class="chart-tooltip" role="tooltip" aria-live="polite" aria-hidden="true"></div></div><p class="chart-note">Hover over or focus a point for its counts. Retention dates are hire-cohort months, with outcomes observed through 2025-12-31. Turnover dates are window ends.</p></section>
+        <section class="panel context-panel"><h2>External context under estimated publication lags</h2><div id="signals" class="signals"></div></section>
+        <section class="panel relationship-panel">
+          <div class="panel-heading"><div><h2>Relationship across countries</h2><p class="chart-note">Each dot is one country average. Source observations are kept at their original frequency before averaging.</p></div><label>External signal <select id="indicator"></select></label></div>
+          <div class="relationship-summary"><strong id="relationship-stat">—</strong><span id="relationship-note">—</span></div>
+          <div class="chart-wrap"><svg id="relationship-chart" viewBox="0 0 800 260" role="img" aria-label="Country level relationship between retention and external signal"></svg><div class="chart-tooltip" role="tooltip" aria-live="polite" aria-hidden="true"></div></div>
+          <p class="chart-note">Pearson correlation with an approximate 95% interval when enough countries are available. The country count changes by signal; this view is descriptive and cannot establish causation. Comparisons are exploratory, unadjusted for multiple testing and differences in workforce composition.</p>
+        </section>
+        <section class="panel quality-panel"><h2>Data quality and sources</h2><div class="quality-grid"><div id="quality-summary"></div><div id="source-register"></div></div></section>
+        </div>
+        <section class="panel caveat"><h2>Interpret with care</h2><p>External signals are descriptive context only. They do not establish causation. Quarterly and annual sources retain their original observation frequency; availability is based on estimated publication lags. These revised snapshots cannot guarantee historical availability. <a href="../docs/requirements-refinement.md">Methodology</a> · <a href="../docs/findings.md">Findings</a>.</p></section>
+      </section>
+    </main>
+    <script src="app.js?v=relationship-axes"></script>
+  </body>
+</html>

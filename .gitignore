@@ -1,0 +1,34 @@
+# Local Python environment and generated package metadata
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Test and lint caches
+.pytest_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+dashboard/playwright-report/
+dashboard/test-results/
+
+# Local dependencies, build output, and source-refresh staging
+data/raw/
+dashboard/node_modules/
+dashboard/dist/
+data/fixtures/raw/.staging/
+
+# Local configuration and operating-system files
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Presentation tooling and intermediate renders
+.codex-presentation-build/
+.chart-data-*/
+.presentation-build/
+.presentation-output/
+
+# Keep fixtures, generated analytical evidence, screenshots, and submission docs.

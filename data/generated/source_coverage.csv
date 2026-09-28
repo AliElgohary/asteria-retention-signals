@@ -1,0 +1,16 @@
+provider,indicator,country_code,frequency,observations,first_period,last_period,snapshot_accessed_on
+Eurostat,job_vacancy_rate,BG,Q,20,2021-03-31,2025-12-31,2026-09-25
+Eurostat,job_vacancy_rate,PL,Q,20,2021-03-31,2025-12-31,2026-09-25
+Eurostat,job_vacancy_rate,RO,Q,20,2021-03-31,2025-12-31,2026-09-25
+Eurostat,unemployment_rate,BG,M,60,2021-01-31,2025-12-31,2026-09-25
+Eurostat,unemployment_rate,GR,M,60,2021-01-31,2025-12-31,2026-09-25
+Eurostat,unemployment_rate,IE,M,60,2021-01-31,2025-12-31,2026-09-25
+Eurostat,unemployment_rate,IT,M,60,2021-01-31,2025-12-31,2026-09-25
+Eurostat,unemployment_rate,PL,M,60,2021-01-31,2025-12-31,2026-09-25
+Eurostat,unemployment_rate,RO,M,60,2021-01-31,2025-12-31,2026-09-25
+World Bank,consumer_price_inflation,BG,A,5,2021-12-31,2025-12-31,2026-09-25
+World Bank,consumer_price_inflation,GR,A,5,2021-12-31,2025-12-31,2026-09-25
+World Bank,consumer_price_inflation,IE,A,5,2021-12-31,2025-12-31,2026-09-25
+World Bank,consumer_price_inflation,IT,A,5,2021-12-31,2025-12-31,2026-09-25
+World Bank,consumer_price_inflation,PL,A,5,2021-12-31,2025-12-31,2026-09-25
+World Bank,consumer_price_inflation,RO,A,5,2021-12-31,2025-12-31,2026-09-25
